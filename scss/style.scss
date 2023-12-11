@@ -213,13 +213,14 @@ html,body {
 
     }
 
-        .restaurant__container--new {
+        .restaurant__container--new--one {
             display: flex;
-            position: relative;
-            align-items: center;
+            position: absolute;
+            top: 900px;
+            left: 260px;
             justify-content: center;
-            bottom: 230px;
-            left: 240px;
+            align-items: center;
+            align-content: center;
             width: 80px;
             height: 30px;
             border-radius: 2px;
@@ -228,6 +229,22 @@ html,body {
             font-weight: 500;
         }
 
+
+        .restaurant__container--new--two {
+            display: flex;
+            position: absolute;
+            top: 1160px;
+            left: 260px;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            width: 80px;
+            height: 30px;
+            border-radius: 2px;
+            background-color: #99E2D0;
+            color: #278870;
+            font-weight: 500;
+        }
 }
 
 
