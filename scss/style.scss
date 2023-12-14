@@ -17,6 +17,11 @@ html,body {
     margin: 0;
     padding: 0;
 }
+
+a {
+    all: unset;
+}
+
  
 .logo__title {
     margin: 5px;
@@ -158,6 +163,7 @@ html,body {
         background-color: white;
         width: 90%;
         margin: auto;
+        position: relative;    
     }
 
     .restaurant__container img  {
@@ -173,7 +179,6 @@ html,body {
     }
 
     .restaurant__container--btn {
-        position: relative;
         left: 280px;
         bottom: 40px;
         width: 22px;
@@ -183,13 +188,26 @@ html,body {
 
     .restaurant__btn {
         width: 28px;
-        position: relative;
         font-size: 25px;
         border: none;
         background-color: white;
         -webkit-text-stroke: 1px white;
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        cursor: pointer;
 
-     }
+        
+    }
+
+    .restaurant__btn--icon,
+.restaurant__btn--icon-solid {
+  position: absolute;
+  bottom: 5px;
+}
+
+
+
 
     .restaurant__container--title {
         font-size:18px;
@@ -215,9 +233,8 @@ html,body {
 
         .restaurant__container--new--one {
             display: flex;
-            position: absolute;
-            top: 900px;
-            left: 260px;
+            top: 8px; 
+            right: 8px;
             justify-content: center;
             align-items: center;
             align-content: center;
@@ -227,14 +244,14 @@ html,body {
             background-color: #99E2D0;
             color: #278870;
             font-weight: 500;
+            position: absolute;
         }
 
 
         .restaurant__container--new--two {
             display: flex;
-            position: absolute;
-            top: 1160px;
-            left: 260px;
+            top: 8px; 
+            right: 8px;
             justify-content: center;
             align-items: center;
             align-content: center;
@@ -244,6 +261,8 @@ html,body {
             background-color: #99E2D0;
             color: #278870;
             font-weight: 500;
+            position: absolute;
+
         }
 }
 
@@ -297,5 +316,8 @@ html,body {
     }
         
     }
+
+
+
 
 

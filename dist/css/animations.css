@@ -1,0 +1,39 @@
+@charset "UTF-8";
+/* Les deux icônes partagent la même position absolue pour qu'elles se chevauchent */
+.restaurant__btn--icon,
+.restaurant__btn--icon-solid {
+  position: absolute;
+}
+
+/* L'icône "solid" est initialement invisible  */
+.restaurant__btn--icon-solid {
+  opacity: 0;
+  transition: opacity 2s ease; /* Animation de la propriété opacité sur 2 secondes avec une transition en douceur */
+}
+
+/* Lorsque la souris survole l'icône "regular", l'icône "solid" devient visible */
+.restaurant__btn--icon:hover + .restaurant__btn--icon-solid,
+.restaurant__btn--icon-solid:hover {
+  opacity: 1; /* Opacité à 1 signifie complètement opaque, devenant visible */
+}
+
+.restaurant__btn--icon-solid::before {
+  display: block; /* Afficher comme un élément de bloc pour occuper tout l'espace disponible */
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text; /* Appliquer le dégradé uniquement à l'icone */
+  color: transparent;
+}
+
+/* Lorsque la souris survole l'icône "solid", déclencher une animation pour remplir le cœur */
+.restaurant__btn--icon-solid:hover::before {
+  animation: fillHeart 1s linear forwards; /* Animation appelée fillHeart pendant 1 seconde avec un remplissage linéaire */
+}
+
+/* Animation pour rendre le cœur rempli */
+@keyframes fillHeart {
+  to {
+    color: transparent;
+  }
+}
+
+/*# sourceMappingURL=animations.css.map */

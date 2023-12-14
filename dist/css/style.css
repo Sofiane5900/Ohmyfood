@@ -11,6 +11,10 @@ html, body {
   padding: 0;
 }
 
+a {
+  all: unset;
+}
+
 .logo__title {
   margin: 5px;
   text-align: center;
@@ -131,6 +135,7 @@ html, body {
   background-color: white;
   width: 90%;
   margin: auto;
+  position: relative;
 }
 #restaurant .restaurant__container img {
   width: 100%;
@@ -143,7 +148,6 @@ html, body {
   height: 30px;
 }
 #restaurant .restaurant__container--btn {
-  position: relative;
   left: 280px;
   bottom: 40px;
   width: 22px;
@@ -151,11 +155,19 @@ html, body {
 }
 #restaurant .restaurant__btn {
   width: 28px;
-  position: relative;
   font-size: 25px;
   border: none;
   background-color: white;
   -webkit-text-stroke: 1px white;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+#restaurant .restaurant__btn--icon,
+#restaurant .restaurant__btn--icon-solid {
+  position: absolute;
+  bottom: 5px;
 }
 #restaurant .restaurant__container--title {
   font-size: 18px;
@@ -175,9 +187,8 @@ html, body {
 }
 #restaurant .restaurant__container--new--one {
   display: flex;
-  position: absolute;
-  top: 900px;
-  left: 260px;
+  top: 8px;
+  right: 8px;
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -187,12 +198,12 @@ html, body {
   background-color: #99E2D0;
   color: #278870;
   font-weight: 500;
+  position: absolute;
 }
 #restaurant .restaurant__container--new--two {
   display: flex;
-  position: absolute;
-  top: 1160px;
-  left: 260px;
+  top: 8px;
+  right: 8px;
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -202,6 +213,7 @@ html, body {
   background-color: #99E2D0;
   color: #278870;
   font-weight: 500;
+  position: absolute;
 }
 
 #footer {
