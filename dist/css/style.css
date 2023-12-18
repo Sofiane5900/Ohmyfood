@@ -75,14 +75,17 @@ html, body {
   height: 275px;
   width: 375px;
   object-fit: cover;
-  z-index: 0;
+  position: relative;
+  z-index: 1;
 }
 
 #menu {
   background-color: #f0f0f0;
   border-radius: 25px 25px 0px 0px;
   padding: 2% 3% 3% 3%;
-  top: 38%;
+  position: relative;
+  margin-top: -20px;
+  z-index: 2;
 }
 #menu .menu__header {
   display: flex;
@@ -110,7 +113,7 @@ html, body {
 #menu .restaurant__btn--icon-solid {
   position: absolute;
   right: 9%;
-  top: 3.8%;
+  top: 3.3%;
 }
 #menu .menu__cards {
   display: flex;
@@ -199,6 +202,10 @@ html, body {
   letter-spacing: 0em;
   text-align: left;
 }
+#footer .footer__nav--list {
+  display: flex;
+  flex-direction: column-reverse;
+}
 #footer .footer__nav--text {
   font-size: 16px;
   font-weight: 300;
@@ -224,7 +231,7 @@ html, body {
 }
 
 /* Desktop */
-@media (min-width: 1281px) {
+@media (min-width: 1024px) {
   #header {
     margin: 25px;
   }
@@ -242,6 +249,52 @@ html, body {
     height: 20px;
     top: 35px;
     font-size: 24px;
+  }
+  #menu {
+    background-color: #f0f0f0;
+    border-radius: 25px 25px 0px 0px;
+    padding: 2% 3% 3% 3%;
+    position: relative;
+    z-index: 2;
+    max-width: 1024px;
+    margin: auto;
+    margin-top: -30px;
+  }
+  #menu .menu__header--title {
+    font-family: "Shrikhand", serif;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 41px;
+    letter-spacing: 0em;
+    padding-left: 350px;
+  }
+  #menu .restaurant__btn--icon,
+  #menu .restaurant__btn--icon-solid {
+    position: absolute;
+    right: 34%;
+    top: 5.55%;
+  }
+  #menu .menu__cards--container {
+    width: 70%;
+    margin: auto;
+  }
+  #menu .btn__order--container {
+    padding-left: 180px;
+  }
+  .image__container img {
+    height: 383px;
+    width: 100%;
+  }
+  #footer {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    padding: 10px 10px 5px 10px;
+  }
+  #footer .footer__nav--list {
+    gap: 16px;
   }
 }
 * {
@@ -306,9 +359,14 @@ a {
   font-weight: 500;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
   border-radius: 25px;
   border: none;
   color: #FFFFFF;
+}
+#explorer .btn__explorer:hover {
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(193.33deg, #a16be0 -11.44%, #ff93e1 123.93%);
 }
 
 #functioning {
@@ -345,7 +403,7 @@ a {
   justify-content: center;
   text-align: center;
   position: relative;
-  left: -19px;
+  left: -14px;
   bottom: -5px;
   height: 24px;
   width: 24px;
@@ -528,13 +586,16 @@ a {
   }
   #functioning .functioning__container--list {
     display: flex;
-    flex-direction: initial;
+    flex-direction: row;
+    justify-content: initial;
+    padding-left: 150px;
+    gap: 4%;
     width: 100%;
   }
   #functioning .functioning__container {
     position: relative;
     right: 55px;
-    width: 335px;
+    width: 28%;
   }
   #restaurant {
     display: flex;
@@ -549,7 +610,7 @@ a {
     gap: 50px;
   }
   #footer {
-    padding: 0px 10px 0px 10px;
+    padding: 5px 10px 5px 10px;
   }
   #footer .footer__nav--list {
     display: flex;
