@@ -133,6 +133,15 @@ html, body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+#menu .menu__cards .menu__cards--entry {
+  animation: fade-up 1.5s;
+}
+#menu .menu__cards .menu__cards--main {
+  animation: fade-up 3.5s;
+}
+#menu .menu__cards .menu__cards--desserts {
+  animation: fade-up 3.5s;
+}
 
 .btn__order {
   margin: 30px 0px 30px 75px;
@@ -145,6 +154,11 @@ html, body {
   border-radius: 25px;
   border: none;
   color: #FFFFFF;
+}
+
+.btn__order:hover {
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(193.33deg, #a16be0 -11.44%, #ff93e1 123.93%);
 }
 
 #footer {
@@ -253,7 +267,12 @@ html, body {
     justify-content: flex-start;
     padding: 10px 10px 5px 10px;
   }
+  #footer .footer__logo {
+    padding: 20px;
+  }
   #footer .footer__nav--list {
+    display: flex;
+    flex-direction: row;
     gap: 16px;
   }
 }

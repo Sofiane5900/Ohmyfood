@@ -410,15 +410,16 @@ a {
         }
     }
 
-    #footer {
-        padding: 5px 10px 5px 10px;
 
-        .footer__nav--list {
+    #footer {
         display: flex;
         align-items: center;
         flex-direction: row-reverse;
         justify-content: flex-start;
-        padding: 30px 25px 30px 25px;
+        padding: 10px 10px 5px 10px;
+
+        .footer__nav--list {
+
         gap: 16px;
 
     }
