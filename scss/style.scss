@@ -5,6 +5,7 @@
 @import "./animations.scss";
 @import "./restaurants.scss";
 @import "./mixin.scss";
+@import "./colors.scss";
 
 
 * {
@@ -17,6 +18,7 @@ html,body {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 a {
@@ -33,8 +35,7 @@ a {
 
 #location {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    @include centralize;
     gap: 20px;
     background-color: #ebebeb;
     box-shadow: inset 0 10px 8px -5px #d5d5d5;
@@ -43,11 +44,10 @@ a {
 
 
 #explorer {
-    display: flex;
-    flex-direction: column;
+    @include flexColumn;
     align-items: center;
     padding: 30px 0px 50px;
-    background-color: #F6F6F6;
+    background-color: $secondary-color;
     text-align: center;
 
     .explorer__container-title {
@@ -68,16 +68,16 @@ a {
     }
 
     .btn__explorer {
-        @include gradientPurple;
         width: 218px;
         height: 50px;
         font-size: 16px;
         font-weight: 500;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
         cursor: pointer;
         border-radius: 25px;
         border: none;
-        color: #FFFFFF;
+        color: $primary-color;
     }
 
         .btn__explorer:hover {
@@ -94,8 +94,7 @@ a {
 
 
 #functioning { 
-    display: flex;
-    flex-direction: column;
+    @include flexColumn;
 
 
 
@@ -105,8 +104,7 @@ a {
     }
 
     .functioning__container--list {
-    display: flex;
-    flex-direction: column;
+    @include flexColumn;
     justify-content: space-evenly;
     width: 85%;
     padding-bottom: 10px;
@@ -131,8 +129,7 @@ a {
 
     .functioning__container--number {
         display: flex;
-        align-items: center;
-        justify-content: center;
+        @include centralize;
         text-align: center;
         position: relative;
         left: -14px;
@@ -146,20 +143,18 @@ a {
 
     .functioning__container--icon {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        @include centralize;
         width: 20px;
         height: 25px;
-        color: #7E7E7E;
+        color: $secondary-color;
     }
 }
 
 
 #restaurant {
-    display: flex;
-    flex-direction: column;
+    @include flexColumn;
     background-color: black;
-    background-color: #F6F6F6;
+    background-color: $secondary-color;
     padding-bottom: 60px;
 
 
@@ -170,8 +165,7 @@ a {
     }
 
     .restaurant__container--list {
-        display: flex;
-        flex-direction: column;
+        @include flexColumn;
         gap: 15px;
 
     }
@@ -179,7 +173,7 @@ a {
     .restaurant__container {
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
         border-radius: 15px;
-        background-color: white;
+        background-color: $primary-color;
         width: 90%;
         margin: auto;
         position: relative;    
@@ -209,8 +203,8 @@ a {
         width: 28px;
         font-size: 25px;
         border: none;
-        background-color: white;
-        -webkit-text-stroke: 1px white;
+        background-color: $primary-color;
+        -webkit-text-stroke: 1px $primary-color;
         position: absolute;
         bottom: 30px;
         right: 30px;
@@ -252,11 +246,10 @@ a {
 
         .restaurant__container--new--one {
             display: flex;
+            @include centralize;
+            align-content: center;
             top: 8px; 
             right: 8px;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
             width: 80px;
             height: 30px;
             border-radius: 2px;
@@ -269,10 +262,9 @@ a {
 
         .restaurant__container--new--two {
             display: flex;
+            @include centralize;
             top: 8px; 
             right: 8px;
-            justify-content: center;
-            align-items: center;
             align-content: center;
             width: 80px;
             height: 30px;
@@ -288,7 +280,7 @@ a {
 
 
 #footer {
-    background-color: #353535;
+    background-color: $accent-color;
     padding: 10px 0px 40px 10px;
 
 
@@ -311,7 +303,7 @@ a {
         letter-spacing: 0em;
         text-align: left;
         text-decoration: none;
-        color: #FFFFFF;
+        color: $primary-color;
         
     }  
 
@@ -325,12 +317,12 @@ a {
         font-weight: 500;
         font-size: 16px;
         text-decoration: none;
-        color: #FFFFFF;
+        color: $primary-color;
 
     }
     
     .footer__nav--icon {
-        color: white; 
+        color: $primary-color; 
        
     }
         

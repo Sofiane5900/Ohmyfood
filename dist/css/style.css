@@ -14,8 +14,8 @@
 .loader__background .loader__text {
   display: flex;
   position: absolute;
-  left: 46%;
-  bottom: 55%;
+  left: 20%;
+  bottom: 65%;
   font-family: "Shrikhand", serif;
   font-style: italic;
   font-size: 35px;
@@ -30,8 +30,8 @@
   width: 150px;
   height: 150px;
   position: absolute;
-  top: calc(50vh - 75px);
-  left: calc(50vw - 75px);
+  top: calc(50vh - 100px);
+  left: calc(50vw - 100px);
   animation: loaderFadeOut 3.5s ease-out forwards;
 }
 .loader__background .loader::before,
@@ -75,6 +75,16 @@
   100% {
     opacity: 0;
     visibility: hidden;
+  }
+}
+@media (min-width: 1024px) {
+  .loader__background .loader__text {
+    left: 46%;
+    bottom: 55%;
+  }
+  .loader__background .loader {
+    top: calc(50vh - 75px);
+    left: calc(50vw - 75px);
   }
 }
 /* Animation pour cœur rempli */
@@ -207,8 +217,8 @@ html, body {
   width: 28px;
   font-size: 25px;
   border: none;
-  background-color: white;
-  -webkit-text-stroke: 1px white;
+  background-color: #FFFFFF;
+  -webkit-text-stroke: 1px #FFFFFF;
   cursor: pointer;
 }
 #menu .restaurant__btn--icon,
@@ -343,7 +353,7 @@ html, body {
   color: #FFFFFF;
 }
 #footer .footer__nav--icon {
-  color: white;
+  color: #FFFFFF;
 }
 
 /* Desktop */
@@ -427,6 +437,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 a {
@@ -474,12 +485,12 @@ a {
   line-height: 21.09px;
 }
 #explorer .btn__explorer {
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   width: 218px;
   height: 50px;
   font-size: 16px;
   font-weight: 500;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   cursor: pointer;
   border-radius: 25px;
   border: none;
@@ -534,11 +545,11 @@ a {
 }
 #functioning .functioning__container--icon {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 20px;
   height: 25px;
-  color: #7E7E7E;
+  color: #F6F6F6;
 }
 
 #restaurant {
@@ -559,7 +570,7 @@ a {
 #restaurant .restaurant__container {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
-  background-color: white;
+  background-color: #FFFFFF;
   width: 90%;
   margin: auto;
   position: relative;
@@ -584,8 +595,8 @@ a {
   width: 28px;
   font-size: 25px;
   border: none;
-  background-color: white;
-  -webkit-text-stroke: 1px white;
+  background-color: #FFFFFF;
+  -webkit-text-stroke: 1px #FFFFFF;
   position: absolute;
   bottom: 30px;
   right: 30px;
@@ -614,11 +625,11 @@ a {
 }
 #restaurant .restaurant__container--new--one {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
   top: 8px;
   right: 8px;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
   width: 80px;
   height: 30px;
   border-radius: 2px;
@@ -629,10 +640,10 @@ a {
 }
 #restaurant .restaurant__container--new--two {
   display: flex;
+  align-items: center;
+  justify-content: center;
   top: 8px;
   right: 8px;
-  justify-content: center;
-  align-items: center;
   align-content: center;
   width: 80px;
   height: 30px;
@@ -678,7 +689,7 @@ a {
   color: #FFFFFF;
 }
 #footer .footer__nav--icon {
-  color: white;
+  color: #FFFFFF;
 }
 
 /* Desktop */

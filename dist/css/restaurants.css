@@ -65,8 +65,8 @@ html, body {
   width: 28px;
   font-size: 25px;
   border: none;
-  background-color: white;
-  -webkit-text-stroke: 1px white;
+  background-color: #FFFFFF;
+  -webkit-text-stroke: 1px #FFFFFF;
   cursor: pointer;
 }
 #menu .restaurant__btn--icon,
@@ -201,7 +201,7 @@ html, body {
   color: #FFFFFF;
 }
 #footer .footer__nav--icon {
-  color: white;
+  color: #FFFFFF;
 }
 
 /* Desktop */

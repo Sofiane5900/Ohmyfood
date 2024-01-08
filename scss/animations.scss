@@ -8,11 +8,12 @@
   height: 100%;
   animation: loaderFadeOut 3.5s ease-out forwards;
 
+
   .loader__text {
     display: flex;
     position: absolute;
-    left: 46%;
-    bottom: 55%;
+    left: 20%;
+    bottom: 65%;
     font-family: "Shrikhand", serif;
     font-style: italic;
     font-size: 35px;
@@ -21,7 +22,9 @@
     letter-spacing: 0em;
     animation: loaderFadeOut 3.5s ease-out forwards;
 
+
   }
+  
 
   .loader {
     border: 0 solid transparent;
@@ -29,8 +32,8 @@
     width: 150px;
     height: 150px;
     position: absolute;
-    top: calc(50vh - 75px);
-    left: calc(50vw - 75px);
+    top: calc(50vh - 100px);
+    left: calc(50vw - 100px);
     animation: loaderFadeOut 3.5s ease-out forwards;
 
   }
@@ -86,6 +89,22 @@
   }
 }
 
+@media (min-width: 1024px) {
+
+  .loader__background {
+
+   .loader__text {
+    left: 46%;
+    bottom: 55%;
+   }
+  
+   .loader {
+    top: calc(50vh - 75px);
+    left: calc(50vw - 75px);
+
+   }
+}
+}
 
 
 
@@ -116,7 +135,6 @@
   color: transparent; 
 }
  
-
 
 
 
